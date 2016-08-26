@@ -72,20 +72,11 @@ function repaireVPN(){
 }
 
 function addVPNuser(){
-	#echo "input user name:"
-	#read username
-	#echo "input password:"
-	#read userpassword
-	#echo "${username} pptpd ${userpassword} *" >> /etc/ppp/chap-secrets
-	echo 'flower2 pptpd flower2 *' >> /etc/ppp/chap-secrets
-	echo 'flower1 pptpd flower12 *' >> /etc/ppp/chap-secrets
-	echo 'qingzhikongji pptpd 1234567890 *' >> /etc/ppp/chap-secrets
-	echo 'hfutkevin pptpd 123456789 *' >> /etc/ppp/chap-secrets
-	echo 'zyr0711 pptpd zyr0711 *' >> /etc/ppp/chap-secrets
-	echo 'qianjiangyue pptpd xinzhaobuxuan *' >> /etc/ppp/chap-secrets
-	echo 'TKZ859 pptpd TKZ8591 *' >> /etc/ppp/chap-secrets
-	echo 'thdgn123 pptpd thdgn321 *' >> /etc/ppp/chap-secrets
-	echo 'thdgn123456 pptpd thdgn654321 *' >> /etc/ppp/chap-secrets
+	echo "input user name:"
+	read username
+	echo "input password:"
+	read userpassword
+	echo "${username} pptpd ${userpassword} *" >> /etc/ppp/chap-secrets
 	service iptables restart
 	service pptpd start
 }
